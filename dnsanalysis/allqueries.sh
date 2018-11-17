@@ -1,0 +1,1 @@
+grep ': query\[' dnsmasq.log
