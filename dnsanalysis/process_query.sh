@@ -32,7 +32,7 @@ ipnew=$(mktemp ipnew.XXXXXX)
 #find first local IP that queried new domain
 for new in `cat $resfile`; do
     ip=$(grep "$new from " $yestfile|head -1|cut -f3 -d']'| cut -f 4 -d ' ')
-    echo "$ip $new" >$ipnew
+    echo "$ip $new" >>$ipnew
 done
 
 sort $ipnew >$resfile
